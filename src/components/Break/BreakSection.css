@@ -1,0 +1,18 @@
+.body{
+    width: screen;
+    height: 240px;
+    left: 0px;
+    top: 6129px;
+    background: #373636;
+    border-radius: 0px 0px 50px 50px;
+}
+.p{
+    margin: auto;
+    padding-top: 60px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 46px;
+    text-align: center;
+    color: #E5E5E5;
+}
