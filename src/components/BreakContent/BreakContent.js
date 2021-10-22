@@ -94,8 +94,6 @@ class BreakContent extends React.Component{
                     </span>
                 </div>  
                 
-                    <div className="sideline"></div>
-                
                 <div className="text-wrap">
                     <div className="text">Satu</div>
                     <div className="text">Dua</div>
@@ -103,7 +101,6 @@ class BreakContent extends React.Component{
                     <div className="text">Empat</div>
                     <div className="text">Awesomeness</div>  
                 </div>
-                
                 </div>
                 </div>
             </div>

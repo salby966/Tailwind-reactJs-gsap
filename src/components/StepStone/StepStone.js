@@ -142,7 +142,7 @@ class StepStone extends React.Component{
 
 render(){
     return(
-        <>
+      <main class="relative container mx-auto bg-white px-4">
         <section className="scroll-trigger">
         <ul className="slick-dots classname-display" role="tablist">
             <li className="slick-slide slide-1" role="presentation" data-slide="1">
@@ -168,48 +168,48 @@ render(){
         <div className="slide-container">
             <div id="section1" className="slide" data-slide="1">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner.png"
+                src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
                 alt="Outfitters 2003" />
             <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
             </div>
 
             <div id="section2" className="slide" data-slide="2">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2004-timeline-banner.png"
+                src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                 alt="Outfitters 2004 - multi-city brand" />
             <h4>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h4>
             </div>
 
             <div id="section3" className="slide" data-slide="3">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2021/03/outfitters-2005-timeline-banner-v2.png"
+                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG9mZmljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                 alt="Outfitters 2005 - Womenswear" />
             <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</h4>
             </div>
 
             <div id="section4" className="slide" data-slide="4">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2008-timeline-banner.png"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG9mZmljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                 alt="Outfitters 2008 - Outfitters" />
             <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
             </div>
 
             <div id="section5" className="slide" data-slide="5">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2013-timeline-desktop.jpg"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG9mZmljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                 alt="Outfitters 2013 - Ethnic" />
             <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
             </div>
 
             <div id="section6" className="slide" data-slide="6">
             <img className="timeline-banner desktop-img"
-                src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2020-timeline-banner.png"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG9mZmljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                 alt="Outfitters 2020 - Bespoke Studio" />
             <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
             </div>
         </div>
         </section>
-    </>
+    </main>
     )
 }
 }

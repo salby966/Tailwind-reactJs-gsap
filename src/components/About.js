@@ -1,9 +1,13 @@
 import React from "react";
-import Sidebar from "./SideBar/SideBar";
+import StepStone from "./StepStone/StepStone";
+import History from "./History/History";
 
 function About() {
   return (
-    <Sidebar />
+    <>
+    <History />
+    <StepStone />
+    </>
   );
 }
 export default About;

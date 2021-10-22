@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollhalf{
+    position: relative;
+}
+
+.scrollhalf_group{
+    transition: all 200ms ease-in-out;
+}
+
+.scrollhalf_image{
+    overflow: hidden;
+}
+
+.scrollhalf_content{
+    padding: 3rem;
+}
+
+.scrollhalf_group[data-scroll="out"]{
+    opacity: 0;
+}
+
+.scrollhalf_group[data-scroll="in"]{
+    opacity: calc(var(--visible-y)*1.9);
+}
+
+@media screen and (min-width:900px){
+    .scrollhalf_group{
+        min-height: 100vh;
+    }
+    .scrollhalf_image{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50vw;
+    }
+    .scrollhalf_image img{
+        min-height: 100vh;
+        min-width: 50vw;
+    }
+    .scrollhalf_content{
+        margin: 0 3vw 0 52vw;
+    }
+}

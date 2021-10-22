@@ -15,8 +15,13 @@
     "postcss": "^7.0.39",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-touch-carousel": "^0.10.2",
+    "sass": "^1.43.3",
+    "scroll-out": "^2.2.12",
+    "swiper": "^7.0.9",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "web-vitals": "^1.1.2"
   },

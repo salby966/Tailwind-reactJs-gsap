@@ -17,6 +17,7 @@ const Hero = () => {
     tl.from(image, 1.4, {scale: 1.6, ease: Power2.easeInOut, delay: -1.6})
   });
   return(
+    <main class="relative container mx-auto bg-white px-4">
     <section className="main">
       <div ref={el => (container = el)} className="container">
         <>
@@ -27,6 +28,7 @@ const Hero = () => {
         </>
       </div>
     </section>
+    </main>
   );
 };
 
