@@ -4,6 +4,7 @@ import Hero from './hero/Hero';
 import ProdukSection from './Produk/ProdukSection';
 import BlogSection from './Blog/BlogSection';
 import Video from "./Video/Video";
+import Card from "./Card/Card";
 import TestimoniSection from './Testimoni/TestimoniSection';
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
         <Switch><ProdukSection /></Switch>
         <Switch> <BlogSection /></Switch>
         <Switch> <Video /></Switch>
+        <Switch> <Card /> </Switch>
         <Switch> <TestimoniSection /></Switch>
       </Router>
       </main>

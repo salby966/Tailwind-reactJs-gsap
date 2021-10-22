@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import "./Hero.css";
-import Newyork from '../images/new-york.webp';
+import Heros from '../images/Hero.webp';
 import CSSRulePlugin from 'gsap/CSSRulePlugin';
 import { TimelineLite, Power2 } from 'gsap';
 
@@ -23,7 +23,7 @@ const Hero = () => {
         <>
           <div className="img-container">
             <img
-            ref={el => (image = el)} alt="people" src={Newyork} />
+            ref={el => (image = el)} alt="people" src={Heros} />
           </div>
         </>
       </div>
