@@ -21,6 +21,7 @@
     "react-touch-carousel": "^0.10.2",
     "sass": "^1.43.3",
     "scroll-out": "^2.2.12",
+    "smooth-scrollbar": "^8.6.3",
     "swiper": "^7.0.9",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "web-vitals": "^1.1.2"

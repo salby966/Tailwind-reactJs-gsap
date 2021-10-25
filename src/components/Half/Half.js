@@ -1,85 +1,124 @@
 import React from 'react';
-import "./Half.css";
+import { gsap }  from 'gsap';
+import './Half.css';
+import Scrollbar from 'smooth-scrollbar';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const Half = () =>{
-    return( 
-        <main class="relative container mx-auto bg-white px-4">
-        <article>
-        <figure>
-            <img src='https://unsplash.it/450/800?image=508' alt />
-        </figure>
-        <section>
-                <div>
-                    <h1>Scrolling half by half</h1>
-                    <p>Made in pure #CSS and almost all is "old properties" method. And a bit imagination.<br/>
-                    Yes, the flexbox is old now.</p>
-                </div>
-        </section>
+class Half extends React.Component{
+    componentDidMount(){
+        gsap.registerPlugin(ScrollTrigger);
+        let bodyScrollBar = Scrollbar.init(document.body, {
+          damping: 0.1,
+          delegateTo: document,
+        });
+        ScrollTrigger.scrollerProxy(".scroller", {
+          scrollTop(value) {
+            if (arguments.length) {
+              bodyScrollBar.scrollTop = value;
+            }
+            return bodyScrollBar.scrollTop;
+          },
+        });
+        bodyScrollBar.addListener(ScrollTrigger.update);
+        gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=817' alt />
-        </figure>
-        <section>
-            <div>
-                <h2>I'm Kseso,<br/>
-                &ldquo;a #obCSServer&rdquo;</h2>
-                <p>Ramajero Argonauta, Enredique Amanuense de #CSS.</p>
-            </div>
-        </section>
+        var images = gsap.utils.toArray('.panel:not(.purple)');
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=948' alt />
-        </figure>
-        <section>
-            <div>
-                <h2><a href='https://escss.blogspot.com'>&xi;sCSS Blog</a></h2>
-                <p>#impoCSSible inside EsCSS. A Spanish #CSS blog where the borders & limits of #CSS disappear.</p>
-            </div>
-        </section>
+        images.forEach((image, i) => {
+          
+          var tl = gsap.timeline({
+            
+            scrollTrigger: {
+              trigger: "section.black",
+              scroller: ".scroller",
+              start: () => "top -" + (window.innerHeight*(i+0.5)),
+              end: () => "+=" + window.innerHeight,
+              scrub: true,
+              toggleActions: "play none reverse none",
+              invalidateOnRefresh: true,     
+            }
+            
+          })
+          
+          tl
+          .to(image, { height: 0 })
+          ;
+          
+        });
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=737' alt />
-        </figure>
-        <section>
-            <div>
-                <h2>#impoCSSible is nothing</h2>
-                <p>You don´t need Javascript or #CSS processors either for almost 100% of what you want to do.</p>
-            </div>
-        </section>
+        gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=870' alt />
-        </figure>
-        <section>
-            <div>
-                <h2>Idea from E.Bouças´s <a href='https://codepen.io/eduardoboucas/full/qdaOWv/'>pen</a></h2>
-                <p>Without jQuery or Javascript, nor fixed position (bye IOs problems)</p>
-            </div>
-        </section>
+        var texts = gsap.utils.toArray('.panel-text');
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=743' alt />
-        </figure>
-        <section>
-            <div>
-                <h2>Images from unsplash.it</h2>
-                <p>Because it´s the best for demos. Thanks, guys!</p>
-            </div>
-        </section>
+        texts.forEach((text, i) => {
+          
+          var tl = gsap.timeline({
+            
+            scrollTrigger: {
+              trigger: "section.black",
+              scroller: ".scroller",
+              start: () => "top -" + (window.innerHeight*i),
+              end: () => "+=" + window.innerHeight,
+              scrub: true,
+              toggleActions: "play none reverse none",
+              invalidateOnRefresh: true,     
+            }
+            
+          })
+          
+          tl
+          .to(text, { duration: 0.33, opacity: 1, y:"50%" })  
+          .to(text, { duration: 0.33, opacity: 0, y:"0%" }, 0.66)
+          ;
+          
+        });
+
+        ScrollTrigger.create({
+
+            trigger: "section.black",
+            scroller: ".scroller",
+            scrub: true,
+            // markers: true,
+            pin: true,
+            start: () => "top top",
+            end: () => "+=" + ((images.length + 1) * window.innerHeight),
+            invalidateOnRefresh: true,
         
-        <figure>
-            <img src='https://unsplash.it/450/800?image=452' alt />
-        </figure>
-        <section>
-            <div>
-                <h2>show the PEN.<br/>
-                    <a href='https://escss.blogspot.com/2017/08/scroll-half-by-half-pure-css.html'>link the POST</a></h2>
-                <p>Por una web con mucho estilo, para argonautas con buen gusto.</p>
+        });
+    }
+
+    render(){
+        return(
+                <div className="scroller">
+                <section className="black">
+                    <div className="text-wrap">          
+                        <div className="panel-text">
+                        <img src="./analisis.svg" width="450px" height="450px"></img>
+                        </div> 
+                        <div className="panel-text red-text">
+                        <img src="./kontak.svg" width="450px" height="450px"></img>
+                        </div>   
+                        <div className="panel-text orange-text">
+                        <img src="./repair.svg" width="450px" height="450px"></img>
+                        </div> 
+                        <div className="panel-text purple-text">
+                        <img src="./logistik.svg" width="450px" height="450px"></img>
+                        </div> 
+                    </div>
+                    <div className="p-wrap">
+                        <div className="panel blue">
+                            <img className="panel blue" src="./analisis.svg" width="full" height="full"></img>
+                        </div>
+                        <div className="panel red">
+                        </div>
+                        <div className="panel orange">
+                        </div> 
+                        <div className="panel purple">
+                        </div> 
+                    </div>
+                </section>
             </div>
-        </section> 
-    </article>
-    </main>
-    )
+        );
+    }
 }
-
 export default Half;

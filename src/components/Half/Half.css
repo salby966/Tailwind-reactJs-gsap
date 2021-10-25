@@ -1,52 +1,135 @@
-*{
-    box-sizing: border-box;
+.scroller {
+  height: 50vh;
 }
 
-body{
-    font-size: 30px;
-    padding: 0;
-    margin: 0;
+.orange {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #753500;
 }
 
-.scrollhalf{
+.text {
+  color: #fff;
+}
+
+.black {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.blue {
+    height: 50vh;
+    background-color: #fff;  
+  }
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 50vh;
+}
+
+.panel-text {
+  position: absolute;
+  z-index: 1;
+  width: full;
+  height: full;
+  items-position: center;
+  background-color: #fff;
+  transform:translateY(100%);
+  opacity: 0;
+}
+
+.panel-text.blue-text {
+  color: blue;
+}
+
+.panel-text.red-text {
+  color: red;
+}
+
+.panel-text.purple-text {
+  color: purple;
+}
+
+.panel-text.orange-text {
+  color: orange;
+}
+
+
+.p-wrap {
     position: relative;
+  overflow: hidden;
+  width: 450px;
+  height: 50vh;
 }
 
-.scrollhalf_group{
-    transition: all 200ms ease-in-out;
+.panel {
+    position: absolute;
+    display: flex;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 1;
+    width: 450px;
+    height: 450px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.scrollhalf_image{
-    overflow: hidden;
+img{
+    height: 100%;
+    width: 100%;
 }
 
-.scrollhalf_content{
-    padding: 3rem;
+.panel._2 {
+  z-index: none;
+ 
 }
 
-.scrollhalf_group[data-scroll="out"]{
-    opacity: 0;
+.panel.blue {
+  z-index: auto;
+  background: blue;
 }
 
-.scrollhalf_group[data-scroll="in"]{
-    opacity: calc(var(--visible-y)*1.9);
+.panel.red {
+  z-index: auto;
+  background-color: red;
+  background-image: none;
 }
 
-@media screen and (min-width:900px){
-    .scrollhalf_group{
-        min-height: 100vh;
-    }
-    .scrollhalf_image{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 50vw;
-    }
-    .scrollhalf_image img{
-        min-height: 100vh;
-        min-width: 50vw;
-    }
-    .scrollhalf_content{
-        margin: 0 3vw 0 52vw;
-    }
+.panel.orange {
+  z-index: auto;
+  background-color: #cf5d00;
+  background-image: none;
+}
+
+.panel.purple {
+  z-index: auto;
+  background-color: #808;
+  background-image: none;
 }
