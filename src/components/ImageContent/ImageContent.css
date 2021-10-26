@@ -1,0 +1,75 @@
+
+body {
+    background-color: white;
+    height: 50vh;
+    overflow-x: hidden;
+}
+.moveImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* .moveImage:nth-child(1) {
+    background: #b6916d;
+  }
+  .moveImage:nth-child(2) {
+    background: #bcb8ad;
+  }
+  .moveImage:nth-child(3) {
+    background: #b69187;
+  }
+  .moveImage:nth-child(4) {
+    background: #3c564f;
+  } */
+
+  .reveal {
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    overflow: hidden;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  .line {
+    width: 100%;
+    max-width: 800px;
+    height: 8px;
+    margin: 0 0 10px 0;
+    position: relative;
+    display: inline-block;
+    background-color: yellow;
+  }
+
+  .text-reveal {
+    --scale: scalex(0);
+    --transform-origin: left center;
+    span {
+      display: inline-block;
+      position: relative;
+      color: transparent;
+      
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #f7f7f7;
+        left: 0;
+        transform: var(--scale);
+        transform-origin: var(--transform-origin);
+      }
+    }
+  }

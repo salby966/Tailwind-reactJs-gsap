@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 // import Card from "./Card/Card";
 // import TestimoniSection from './Testimoni/TestimoniSection';
 // import Half from './Half/Half';
-import Post from "./Post/Post";
+// import Post from "./Post/Post";
+import ImageContentSection from "./ImageContent/ImageContentSection";
 
 function Home() {
   return (
@@ -21,7 +22,8 @@ function Home() {
         <Switch> <Card /> </Switch>
         <Switch> <TestimoniSection /></Switch>
         <Switch><Half /></Switch> */}
-        <Switch><Post /></Switch>
+        {/* <Switch><Post /></Switch> */}
+        <ImageContentSection />
       </Router>
       </main>
     </div>
