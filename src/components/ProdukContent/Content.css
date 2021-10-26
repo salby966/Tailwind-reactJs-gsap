@@ -1,13 +1,6 @@
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 10;
-  font-family: Futura
-}
   .vh {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
