@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 // import TestimoniSection from './Testimoni/TestimoniSection';
 // import Half from './Half/Half';
 // import Post from "./Post/Post";
+import TestimoniSlider from "./Testimoni/TestimonialSlider";
 import ImageContentSection from "./ImageContent/ImageContentSection";
 
 function Home() {
@@ -23,7 +24,9 @@ function Home() {
         <Switch> <TestimoniSection /></Switch>
         <Switch><Half /></Switch> */}
         {/* <Switch><Post /></Switch> */}
-        <ImageContentSection />
+        <Switch><TestimoniSlider /></Switch>
+        <Switch> <ImageContentSection /></Switch>
+       
       </Router>
       </main>
     </div>
